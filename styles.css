@@ -1,10 +1,22 @@
 body {
+    margin: 0;
     font-family: sans-serif;
 }
 
 header.top {
     position: relative;
     top: 0;
+}
+
+header.top hgroup {
+    display: block;
+    overflow: hidden;
+    margin: 0 5px;
+}
+
+header.top hgroup div.img-wrap {
+    height: 0;
+    -webkit-transition: all 0.5s ease-in-out;
 }
 
 nav.top {
@@ -23,15 +35,11 @@ nav.top ul li {
     padding: 0.25em 1em;
 }
 
-header.top hgroup {
-    position: absolute;
-    top: 20px;
-}
-
 header.top nav.main {
-    position: absolute;
+    clear: both;
+/*    position: absolute;
     top: 150px;
-}
+*/}
 
 nav.main ul {
     list-style: none;
@@ -40,11 +48,14 @@ nav.main ul {
 }
 
 nav.main ul li {
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
     float: left;
     height: 2.1em;
     padding: 0.25em 1em;
     font-size: 0.75em;
     width: inherit;
+    margin: 5px;
     -webkit-transition-property: background-color, height;
     -webkit-transition-duration: 0.25s, 0.5s;
     -webkit-transition-delay: 0, 0.05s;
@@ -61,7 +72,7 @@ nav.main strong {
 
 nav.main div {
     position: absolute;
-    width: 200px;
+    width: 184px;
     display: block;
     overflow: hidden;
 }
@@ -87,7 +98,7 @@ nav.main hr {
 }
 
 body.homepage nav.main hr {
-    width: 180px;
+    width: 184px;
 }
 
 body.homepage nav.main strong {
@@ -101,6 +112,10 @@ body.homepage nav.main li span {
     opacity: 1;
     top: 0;
     -webkit-transition-delay: 0.5s, 0s;
+}
+
+body.homepage header.top div.img-wrap {
+    height: 145px;
 }
 
 /* Main nav custom stylings */
@@ -122,4 +137,9 @@ nav.main li.publications { background-color: #993; }
 nav.main li:hover {
     background-color: #033c59 !important;
     color: #fff !important;
+}
+
+/* content */
+#content {
+    clear: both;
 }
