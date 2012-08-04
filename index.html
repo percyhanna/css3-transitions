@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="styles.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    </head>
+    <body class="homepage">
+        <header class="top">
+            <hgroup>
+                <h1>Short-Term Evangelical Missions</h1>
+                <h2>Short-Term Impact/Long-Term Results Since 1985</h2>
+                <img src="http://stemintl.org/images/randimage_6.jpg" />
+            </hgroup>
+            <nav class="top">
+                <ul>
+                    <li>About STEM Int'l</li>
+                    <li>Donations/Payments/Support</li>
+                    <li>Contact Us</li>
+                </ul>
+            </nav>
+            <nav class="main">
+                <ul>
+                    <li class="trips">
+                        <strong>Trips</strong>
+                        <hr/>
+                        <div><span>Join or Form a Short-Term Mission Team</span></div>
+                    </li>
+                    <li class="training">
+                        <strong>Training</strong>
+                        <hr/>
+                        <div><span>Get Short-Term Mission Training/Consulting</span></div>
+                    </li>
+                    <li class="publications">
+                        <strong>Publications</strong>
+                        <hr/>
+                        <div><span>Order Mission Books &amp; Resources</span></div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div style="position: absolute; top: 400px;">
+            <button data-section="homepage">Home Page</button>
+            <button data-section="trips">Trips</button>
+            <button data-section="training">Training</button>
+            <button data-section="publications">Publications</button>
+        </div>
+        <script type="text/javascript">
+        window.onload = function() {
+            var sections = ["trips", "training", "publications"];
+
+            document.body.addEventListener('click', function(ev) {
+                if (ev.srcElement && ev.srcElement.tagName.toLowerCase() === "button") {
+                    document.body.className = ev.srcElement.getAttribute("data-section");
+                }
+            });
+        };
+        </script>
+    </body>
+</html>

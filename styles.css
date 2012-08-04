@@ -1,0 +1,125 @@
+body {
+    font-family: sans-serif;
+}
+
+header.top {
+    position: relative;
+    top: 0;
+}
+
+nav.top {
+    position: absolute;
+    top: 0;
+}
+
+nav.top ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav.top ul li {
+    float: left;
+    padding: 0.25em 1em;
+}
+
+header.top hgroup {
+    position: absolute;
+    top: 20px;
+}
+
+header.top nav.main {
+    position: absolute;
+    top: 150px;
+}
+
+nav.main ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav.main ul li {
+    float: left;
+    height: 2.1em;
+    padding: 0.25em 1em;
+    font-size: 0.75em;
+    width: inherit;
+    -webkit-transition-property: background-color, height;
+    -webkit-transition-duration: 0.25s, 0.5s;
+    -webkit-transition-delay: 0, 0.05s;
+    -webkit-transition-timing-function: ease, ease;
+/*    -webkit-transition: background-color 500ms ease-in-out, color 500ms ease-in-out, all 1s ease-in-out;*/
+}
+
+nav.main strong {
+    display: block;
+    text-transform: uppercase;
+    font-size: 2em;
+    -webkit-transition: all 0.25s ease-in-out;
+}
+
+nav.main div {
+    position: absolute;
+    width: 200px;
+    display: block;
+    overflow: hidden;
+}
+
+nav.main span {
+    position: relative;
+    top: -30px;
+    display: block;
+    color: #000;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease-in-out, color 0.25s ease-in-out;
+    -webkit-transition-delay: 0s, 0s;
+}
+
+nav.main hr {
+    visibility: hidden;
+    margin: 0;
+    width: 0;
+    height: 0;
+    color: transparent;
+    background-color: transparent;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+body.homepage nav.main hr {
+    width: 180px;
+}
+
+body.homepage nav.main strong {
+}
+
+body.homepage nav.main li {
+    height: 5em;
+}
+
+body.homepage nav.main li span {
+    opacity: 1;
+    top: 0;
+    -webkit-transition-delay: 0.5s, 0s;
+}
+
+/* Main nav custom stylings */
+nav.main li:hover span {
+    color: #fff;
+}
+
+body.trips nav.main li.trips,
+body.training nav.main li.training,
+body.publications nav.main li.publications {
+    color: #666;
+    background-color: #fff;
+}
+
+nav.main li.trips { background-color: #9ab1bd; }
+nav.main li.training { background-color: #b76b1b; }
+nav.main li.publications { background-color: #993; }
+
+nav.main li:hover {
+    background-color: #033c59 !important;
+    color: #fff !important;
+}
