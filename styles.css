@@ -1,6 +1,16 @@
 body {
     margin: 0;
     font-family: sans-serif;
+    background-image: -webkit-repeating-linear-gradient(90deg, #92a7b3 0%, #92a7b3 50%, #96acb8 50%, #96acb8 100%);
+    -webkit-background-size: 10px;
+}
+
+#wrap {
+    background: #fff;
+    width: 800px;
+    margin: 0 auto;
+    padding: 0 5px;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
 }
 
 header.top {
@@ -11,7 +21,6 @@ header.top {
 header.top hgroup {
     display: block;
     overflow: hidden;
-    margin: 0 5px;
 }
 
 header.top hgroup div.img-wrap {
@@ -51,16 +60,25 @@ nav.main ul li {
     -webkit-border-top-left-radius: 10px;
     -webkit-border-top-right-radius: 10px;
     float: left;
-    height: 2.1em;
-    padding: 0.25em 1em;
+    margin: 5px 5px 0 0;
     font-size: 0.75em;
-    width: inherit;
-    margin: 5px;
+    height: 3em;
     -webkit-transition-property: background-color, height;
     -webkit-transition-duration: 0.25s, 0.5s;
     -webkit-transition-delay: 0, 0.05s;
     -webkit-transition-timing-function: ease, ease;
-/*    -webkit-transition: background-color 500ms ease-in-out, color 500ms ease-in-out, all 1s ease-in-out;*/
+}
+
+nav.main ul li:last-child {
+    margin-right: 0;
+}
+
+nav.main ul li a {
+    display: block;
+    padding: 0.4em 1em;
+    width: inherit;
+    text-decoration: none;
+    color: #000;
 }
 
 nav.main strong {
@@ -70,7 +88,7 @@ nav.main strong {
     -webkit-transition: all 0.25s ease-in-out;
 }
 
-nav.main div {
+nav.main aside {
     position: absolute;
     width: 184px;
     display: block;
@@ -105,7 +123,7 @@ body.homepage nav.main strong {
 }
 
 body.homepage nav.main li {
-    height: 5em;
+    height: 5.75em;
 }
 
 body.homepage nav.main li span {
@@ -119,6 +137,7 @@ body.homepage header.top div.img-wrap {
 }
 
 /* Main nav custom stylings */
+nav.main li:hover a,
 nav.main li:hover span {
     color: #fff;
 }
