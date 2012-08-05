@@ -13,6 +13,11 @@ body {
     margin: 0 auto;
     padding: 0 5px;
     box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+body.not-homepage #wrap {
+    width: 750px;
 }
 
 header.top {
@@ -24,6 +29,13 @@ header.top {
 header.top hgroup {
     display: block;
     overflow: hidden;
+}
+
+#stem-logo {
+    position: absolute;
+    top: 46px;
+    right: 8px;
+    -webkit-transition: all 0.5s ease-in-out;
 }
 
 header.top hgroup div.img-wrap {
@@ -131,6 +143,11 @@ body.homepage header.top div.img-wrap {
 
 body.homepage header.top div.img-wrap img {
     top: 0;
+}
+
+body.not-homepage #stem-logo {
+    top: 12px;
+    right: 12px;
 }
 
 /* Main nav custom stylings */
