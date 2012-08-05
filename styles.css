@@ -178,19 +178,17 @@ body.not-homepage #content {
 }
 
 #promo {
-    width: 400px;
+    width: 420px;
     -webkit-transition: all 0.5s ease-in-out;
 }
 
 body.not-homepage #promo {
-    width: 535px;
+    width: 580px;
 }
 
 #news {
     width: 200px;
-    position: absolute;
-    top: 0;
-    left: 400px;
+    float: right;
     -webkit-transition: all 0.5s ease-in-out;
 }
 
@@ -212,4 +210,8 @@ body.not-homepage #news {
 body.not-homepage #sidenav {
     width: 160px;
     right: 0;
+}
+
+br.clear {
+    clear: both;
 }
