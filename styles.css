@@ -168,5 +168,48 @@ nav.main a:hover {
 
 /* content */
 #content {
+    position: relative;
     clear: both;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+body.not-homepage #content {
+    top: -34px;
+}
+
+#promo {
+    width: 400px;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+body.not-homepage #promo {
+    width: 535px;
+}
+
+#news {
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 400px;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+body.not-homepage #news {
+    opacity: 0;
+}
+
+#sidenav {
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    top: 0;
+    right: 0;
+    background-color: #637680;
+    height: 100%;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+body.not-homepage #sidenav {
+    width: 160px;
+    right: 0;
 }
