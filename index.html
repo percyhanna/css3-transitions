@@ -6,13 +6,6 @@
         <link rel="stylesheet" href="styles.css" type="text/css" media="screen" title="no title" charset="utf-8">
     </head>
     <body class="homepage">
-        <div style="position: absolute; top: 0px; right: 50px;">
-            <button data-section="homepage">Home Page</button>
-            <button data-section="trips">Trips</button>
-            <button data-section="training">Training</button>
-            <button data-section="publications">Publications</button>
-        </div>
-
         <div id="wrap">
             <header class="top">
                 <nav class="top">
@@ -34,22 +27,19 @@
                         <li class="trips">
                             <a href="#" data-section="trips">
                                 <strong>Trips</strong>
-                                <hr/>
-                                <aside><span>Join or Form a Short-Term Mission Team</span></aside>
+                                <span>Join or Form a Short-Term Mission Team</span>
                             </a>
                         </li>
                         <li class="training">
                             <a href="#" data-section="training">
                                 <strong>Training</strong>
-                                <hr/>
-                                <aside><span>Get Short-Term Mission Training/Consulting</span></aside>
+                                <span>Get Short-Term Mission Training/Consulting</span>
                             </a>
                         </li>
                         <li class="publications">
                             <a href="#" data-section="publications">
                                 <strong>Publications</strong>
-                                <hr/>
-                                <aside><span>Order Mission Books &amp; Resources</span></aside>
+                                <span>Order Mission Books &amp; Resources</span>
                             </a>
                         </li>
                     </ul>
@@ -144,17 +134,18 @@
         window.onload = function() {
             document.body.addEventListener('click', function(ev) {
                 var target = ev.srcElement;
-                if (target && target.tagName.toLowerCase() !== "button") {
-                    while (target) {
-                        if (target.tagName.toLowerCase() === "a") {
-                            break;
-                        }
-                        target = target.parentNode;
+                while (target) {
+                    if (target.tagName.toLowerCase() === "a") {
+                        break;
                     }
+                    target = target.parentNode;
                 }
 
                 if (target) {
                     document.body.className = target.getAttribute("data-section");
+                    if (document.body.className !== "homepage") {
+                        document.body.className += " not-homepage";
+                    }
                     ev.stopPropagation();
                     ev.preventDefault(true);
                     return false;
