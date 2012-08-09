@@ -20,15 +20,28 @@ body.not-homepage #wrap {
     width: 750px;
 }
 
-header.top {
+#header {
     position: relative;
     top: 0;
-    background-color: #cdcda9;
+    -webkit-transition: all 0.5s ease-in-out;
 }
 
-header.top hgroup {
+#header-top {
+    background-color: #cdcda9;
+    height: 128px;
+}
+
+#header hgroup {
     display: block;
     overflow: hidden;
+    position: absolute;
+    top: 20px;
+}
+
+#header-main {
+    overflow: hidden;
+    height: 194px;
+    -webkit-transition: all 0.5s ease-in-out;
 }
 
 #stem-logo {
@@ -38,111 +51,102 @@ header.top hgroup {
     -webkit-transition: all 0.5s ease-in-out;
 }
 
-header.top hgroup div.img-wrap {
-    overflow: hidden;
-    height: 0;
-    -webkit-transition: all 0.5s ease-in-out;
-}
-
-header.top hgroup div.img-wrap img {
-    position: relative;
-    top: -145px;
-    -webkit-transition: all 0.5s ease-in-out;
-}
-
-nav.top {
+#top-nav {
     position: absolute;
     top: 0;
 }
 
-nav.top ul {
+#top-nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-nav.top ul li {
+#top-nav ul li {
     float: left;
     padding: 0.25em 1em;
 }
 
-header.top nav.main {
+#main-nav {
     font-family: 'Homenaje', sans-serif;
     clear: both;
-    position: relative;
-    top: 0;
+    position: absolute;
+    bottom: 0;
     -webkit-transition: all 0.5s ease-in-out;
 }
 
-nav.main ul {
+body.not-homepage #main-nav {
+    bottom: 0;
+    top: auto;
+}
+
+body.not-homepage #header-main {
+    height: 0;
+}
+
+#main-nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-nav.main ul li {
+#main-nav ul li {
     float: left;
     margin: 5px 5px 0 0;
-    font-size: 0.75em;
 }
 
-nav.main ul li:last-child {
+#main-nav ul li:last-child {
     margin-right: 0;
 }
 
-nav.main ul li a {
+#main-nav ul li a {
     -webkit-border-top-left-radius: 10px;
     -webkit-border-top-right-radius: 10px;
-/*    height: 3em;*/
     display: block;
-    padding: 0.4em 1em;
+    padding: 5px 10px;
+    height: 20px;
     width: inherit;
     text-decoration: none;
     color: #fff;
     -webkit-transition: all 0.25s ease-in-out;
 }
 
-nav.main strong {
+#main-nav strong {
     display: block;
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: 18px;
     -webkit-transition: all 0.25s ease-in-out;
 }
 
-nav.main span {
+#main-nav span {
     display: block;
-    width: 189px;
+    width: 193px;
     color: #fff;
     opacity: 0;
     top: 0;
-    height: 1.25em;
+    font-size: 12px;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-transition: all 0.5s ease-in-out, color 0.25s ease-in-out;
 }
 
-body.not-homepage nav.main {
-    top: -34px;
+body.not-homepage #main-nav {
     left: 15px;
 }
 
-body.not-homepage nav.main span {
+body.not-homepage #main-nav span {
     text-indent: -189px;
     width: 0;
     height: 0;
     opacity: 1;
 }
 
-body.homepage nav.main li span {
+body.homepage #main-nav li a {
+    height: 34px;
+}
+
+body.homepage #main-nav li span {
     opacity: 1;
-}
-
-body.homepage header.top div.img-wrap {
-    height: 145px;
-}
-
-body.homepage header.top div.img-wrap img {
-    top: 0;
 }
 
 body.not-homepage #stem-logo {
@@ -151,18 +155,18 @@ body.not-homepage #stem-logo {
 }
 
 /* Main nav custom stylings */
-body.trips nav.main li.trips a,
-body.training nav.main li.training a,
-body.publications nav.main li.publications a {
+body.trips #main-nav li.trips a,
+body.training #main-nav li.training a,
+body.publications #main-nav li.publications a {
     color: #666;
     background-color: #fff !important;
 }
 
-nav.main li.trips a { background-color: #9ab1bd; }
-nav.main li.training a { background-color: #b76b1b; }
-nav.main li.publications a { background-color: #993; }
+#main-nav li.trips a { background-color: #9ab1bd; }
+#main-nav li.training a { background-color: #b76b1b; }
+#main-nav li.publications a { background-color: #993; }
 
-nav.main a:hover {
+#main-nav a:hover {
     background-color: #033c59 !important;
 }
 
@@ -174,7 +178,6 @@ nav.main a:hover {
 }
 
 body.not-homepage #content {
-    top: -34px;
 }
 
 #promo {
