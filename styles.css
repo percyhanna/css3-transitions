@@ -21,6 +21,7 @@ body.not-homepage #wrap {
 }
 
 #header {
+    font-family: 'Homenaje', sans-serif;
     position: relative;
     top: 0;
     -webkit-transition: all 0.5s ease-in-out;
@@ -28,6 +29,11 @@ body.not-homepage #wrap {
 
 #header-top {
     background-color: #cdcda9;
+    height: 90px;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+body.not-homepage #header-top {
     height: 128px;
 }
 
@@ -35,49 +41,76 @@ body.not-homepage #wrap {
     display: block;
     overflow: hidden;
     position: absolute;
-    top: 20px;
+    top: 40px;
+    left: 15px;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+body.not-homepage #header hgroup {
+    top: 55px;
+    left: 380px;
+}
+
+#header hgroup h1,
+#header hgroup a,
+#header hgroup h2 {
+    margin: 0;
+    color: #555;
+    text-decoration: none;
+}
+
+#header hgroup h1 {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+#header hgroup h2 {
+    font-size: 14px;
+    font-weight: normal;
 }
 
 #header-main {
     overflow: hidden;
     height: 194px;
-    -webkit-transition: all 0.5s ease-in-out;
+    -webkit-transition: height 0.5s ease-in-out;
 }
 
 #stem-logo {
     position: absolute;
-    top: 46px;
+    top: 12px;
     right: 8px;
-    -webkit-transition: all 0.5s ease-in-out;
+    -webkit-transition: top 0.5s ease-in-out, right 0.5s ease-in-out;
 }
 
 #top-nav {
+    background-image: -webkit-linear-gradient(0deg, #444 0%, #666 100%);
+    width: 100%;
     position: absolute;
     top: 0;
 }
 
 #top-nav ul {
     list-style: none;
-    margin: 0;
+    margin: 5px 0;
     padding: 0;
+    height: 22px;
 }
 
 #top-nav ul li {
     float: left;
-    padding: 0.25em 1em;
+    height: 15px;
+    padding: 3px 10px;
+    color: #fff;
+    font-weight: normal;
+    border-right: dotted 1px #aaa;
 }
 
 #main-nav {
-    font-family: 'Homenaje', sans-serif;
     clear: both;
     position: absolute;
     bottom: 0;
-    -webkit-transition: all 0.5s ease-in-out;
-}
-
-body.not-homepage #main-nav {
-    bottom: 0;
     top: auto;
+    -webkit-transition: left 0.5s ease-in-out;
 }
 
 body.not-homepage #header-main {
@@ -93,10 +126,15 @@ body.not-homepage #header-main {
 #main-nav ul li {
     float: left;
     margin: 5px 5px 0 0;
+    -webkit-transition: margin 0.5s ease-in-out;
 }
 
 #main-nav ul li:last-child {
     margin-right: 0;
+}
+
+body.not-homepage #main-nav ul li {
+    margin-right: 2px;
 }
 
 #main-nav ul li a {
@@ -115,19 +153,19 @@ body.not-homepage #header-main {
     display: block;
     text-transform: uppercase;
     font-size: 18px;
-    -webkit-transition: all 0.25s ease-in-out;
+    -webkit-transition: color 0.25s ease-in-out;
 }
 
 #main-nav span {
     display: block;
     width: 193px;
+    height: 18px;
     color: #fff;
     opacity: 0;
     top: 0;
     font-size: 12px;
     overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-transition: all 0.5s ease-in-out, color 0.25s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
 }
 
 body.not-homepage #main-nav {
